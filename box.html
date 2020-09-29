@@ -4,6 +4,13 @@
     <meta charset="utf-8">
     <title></title>
     <style media="screen">
+      * {
+        transition: all .6s ease;
+        position: absolute;
+      }
+      *:hover {
+        transition: all .1s ease;
+      }
       .box {
         width: 200px;
         height: 200px;
@@ -17,15 +24,33 @@
       }
       .red-c {
         background: red;
+        border: none;
         border-radius: 50%;
+        top: 50px;
+        left: 450px;
+      }
+      .red-c:hover {
+        transform: scale(2);
+        background: orange;
       }
       .blue {
-        background: blue;
+        background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Dom_Narkomfin_under_renovation.jpg/600px-Dom_Narkomfin_under_renovation.jpg);
+        background-size: auto 100%;
+        top: 20px;
+        left: 100px;
+        transform: rotate(32deg);
+      }
+      .blue:hover {
+        transform: rotate(132deg);
+      }
+      .black {
+        top: 300px;
+        left: 400px;
       }
     </style>
   </head>
   <body>
-    <div class="box">Some text</div>
+    <div class="box black">Some text</div>
     <div class="box red-c"></div>
     <div class="box blue"></div>
 
