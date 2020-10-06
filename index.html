@@ -3,28 +3,19 @@
 <head>
   <link rel="stylesheet" href="stylesheets/style.css">
   <script src="javascripts/jquery-3.5.1.js" charset="utf-8"></script>
+  <script src="javascripts/sidebar.js" charset="utf-8"></script>
+
   <meta charset="utf-8">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
   <title>Дом Наркомфина</title>
-  <script type="text/javascript">
-  $(function() {
-    $('.sidebar a').each(function() {
-      $(this).on('click', function(e) {
-        e.preventDefault();
-        var scrollTo = $(this).attr('href');
-        var whitespace = scrollTo == '#s1' ? 70 : 30;
-        $('html,body').animate({
-          scrollTop: $(scrollTo).offset().top - whitespace
-        }, 1000);
-      });
-    });
-  });
-  </script>
 </head>
 <body>
 <div class="menubar">
   <a href="#"><img src="images/logo.svg"></a>
   <a href="#">О проекте</a>
 </div>
+
 <nav class="sidebar">
   <ul>
     <li><a href="#s1">Дом Наркомфина</a></li>
