@@ -6,7 +6,6 @@ nav {
   padding: 30px;
   opacity: .2;
   transition: all .8s ease-out;
-  column-count: 2;
 }
 nav:hover {
   opacity: 1;
