@@ -60,3 +60,6 @@ article ul {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(20px);
 }
+iframe {
+  display: block;
+}
