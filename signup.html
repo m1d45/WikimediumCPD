@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="stylesheets/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mailtoharshit/San-Francisco-Font-/sanfrancisco.css">
+    <style media="screen">
+    body {
+      font-family: "San Francisco";
+    }
+    * {
+      box-sizing: border-box;
+    }
+    form {
+      width: 1000px;
+      display: block;
+      margin: 0 auto;
+    }
+    p, input, select, caption, label, button, .double {
+      width: 460px;
+      display: block;
+      margin: 0 auto;
+      -webkit-appearance:none;
+    }
+    select {
+      color: #b6b6b6;
+      position: relative;
+    }
+    select+span {
+      display: block;
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      color: red;
+      bottom: 20px;
+      right: calc(50% - 210px);
+      color: #d6d6d6;
+      font-size: 32px;
+    }
+    p {
+      text-align: center;
+      font-size: 17px;
+      line-height: 25px;
+      margin-bottom: 14px;
+    }
+    input, select {
+      height: 56px;
+      padding: 16px;
+      font-size: 17px;
+      border-radius: 4px;
+      border: 1px solid #d6d6d6;
+      margin-bottom: 14px;
+    }
+    hr {
+      margin: 16px 0 30px;
+      color: #d6d6d6;
+      border: none;
+      border-bottom: 1px solid #d6d6d6;
+    }
+    button {
+      background: linear-gradient(#42a1ec,#0070c9);
+      border: 1px solid #1482d0;
+      width: 102px;
+      height: 36px;
+      color: white;
+      border-radius: 4px;
+      padding: 4px 15px;
+      font-size: 18px;
+      font-weight: 200;
+      cursor: pointer;
+    }
+    .blue-circle {
+      width: 16px;
+      height: 16px;
+      text-decoration: none;
+      color: white;
+      background: #0070c9;
+      font-size: 12px;
+      line-height: 16px;
+      display: block;
+      text-align: center;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 20px;
+      right: calc(50% - 255px);
+    }
+    .infobar {
+      position: relative;
+    }
+    .double {
+      display: flex;
+      justify-content: space-between;
+    }
+    .double input {
+      width: calc(50% - 7.5px);
+      margin: 0 0 14px;
+      display: inline-block;
+    }
+
+    </style>
+  </head>
+  <body>
+    <h1>Create Your ID</h1>
+    <form class="">
+      <p>One Apple ID is all you need to access all Apple services.<br>Already have an Apple ID? <a href="#">Find it here ›</a></p>
+      <div class="double">
+        <input type="text" placeholder="Firts name">
+        <input type="text" placeholder="Last name">
+      </div>
+
+      <div class="infobar">
+        <select class="" name="">
+          <option value="">United States</option>
+          <option value="">Russia</option>
+        </select><span>ˇ</span>
+      </div>
+
+      <div class="infobar">
+        <input type="text" placeholder="Birthday"><a class="blue-circle" href="#">?</a>
+      </div>
+
+      <hr>
+
+      <input type="email" placeholder="name@example.com">
+      <caption>This will be your new Apple ID.</caption>
+      <input type="password" placeholder="Password">
+      <input type="password" placeholder="Confirm password">
+
+      <hr>
+
+      <select>
+        <option value="">+1 (United States)</option>
+        <option value="">+7 (Russia)</option>
+      </select>
+      <div class="infobar">
+        <input type="tel" placeholder="Phone number"><a class="blue-circle" href="#">?</a>
+      </div>
+      <caption>Be sure to enter a phone number you can always access. It will be used to verify your identity any time you sign in on a new device or web browser. Messaging or data rates my apply.</caption>
+      <p>Verify with:</p>
+      <input type="radio" name="g1" id="TM" value=""><label for="TM">Text message</label>
+      <input type="radio" name="g1" id="PC" value=""><label for="PC">Phone call</label>
+
+      <hr>
+
+      <input type="checkbox" name="" value="">
+      <label for="">Announcements</label>
+      <caption>Get announcements, recommendations, and updates about Apple products, services, and software.</caption>
+
+      <input type="checkbox" name="" value="">
+      <label for="">Apps, Music, TV, and More</label>
+      <caption>Get new releases, exclusive content, special offers, and recommendations for apps, music, movies, TV, books, podcasts, Apple Pay, Apple Card and more.</caption>
+
+      <input type="checkbox" name="" value="">
+      <label for="">Apple News Newsletter</label>
+      <caption>The best stories, picked by the Apple News editors, delivered right to your inbox.</caption>
+
+      <hr>
+
+      <button type="button" name="button">Continue</button>
+
+
+
+
+    </form>
+  </body>
+</html>
