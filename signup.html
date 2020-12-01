@@ -22,12 +22,21 @@
     input[type=email],
     input[type=password],
     input[type=tel],
-    select,
-    label, button, .double, .caption {
+    select,label, button,
+    .double, .caption, .radio-block, .checkbox-block {
       width: 460px;
       display: block;
       margin: 0 auto 14px;
       -webkit-appearance:none;
+    }
+    input[type=text]:focus,
+    input[type=email]:focus,
+    input[type=password]:focus,
+    input[type=tel]:focus,
+    select:focus {
+      outline: none;
+      border-color: #42a1ec;
+      box-shadow: 0 0 3px 1px rgba(66, 161, 236, 0.5);
     }
     select {
       color: #b6b6b6;
@@ -49,6 +58,10 @@
       font-size: 17px;
       line-height: 25px;
       margin-bottom: 14px;
+    }
+    a {
+      text-decoration: none;
+      color: #0070c9;
     }
     input, select {
       height: 56px;
@@ -75,6 +88,10 @@
       font-size: 18px;
       font-weight: 200;
       cursor: pointer;
+    }
+    input[type=radio] {
+      margin-bottom: 16px;
+      vertical-align: bottom;
     }
     .blue-circle {
       width: 16px;
@@ -109,6 +126,30 @@
       line-height: 1.2;
       color: #aaa;
       margin-bottom: 20px;
+    }
+    .radio-block * {
+      display: inline-block;
+      width: auto;
+      height: 20px;
+    }
+    .radio-block label {
+      margin-right: 20px;
+    }
+    .radio-block p {
+      margin-right: 10px;
+    }
+    .checkbox-block {
+      position: relative;
+      margin-bottom: 20px;
+    }
+    .checkbox-block p, .checkbox-block label {
+      margin-left: 24px;
+      margin-bottom: 5px;
+    }
+    .checkbox-block input[type=checkbox] {
+      position: absolute;
+      height: 20px;
+      top: -5px;
     }
 
     </style>
@@ -150,23 +191,31 @@
         <input type="tel" placeholder="Phone number"><a class="blue-circle" href="#">?</a>
       </div>
       <p class="caption">Be sure to enter a phone number you can always access. It will be used to verify your identity any time you sign in on a new device or web browser. Messaging or data rates my apply.</p>
-      <p>Verify with:</p>
-      <input type="radio" name="g1" id="TM" value=""><label for="TM">Text message</label>
-      <input type="radio" name="g1" id="PC" value=""><label for="PC">Phone call</label>
+      <div class="radio-block">
+        <p>Verify with:</p>
+        <input type="radio" name="g1" id="TM" value=""><label for="TM">Text message</label>
+        <input type="radio" name="g1" id="PC" value=""><label for="PC">Phone call</label>
+      </div>
 
       <hr>
 
-      <input type="checkbox" name="" value="">
-      <label for="">Announcements</label>
-      <p class="caption">Get announcements, recommendations, and updates about Apple products, services, and software.</p>
+      <div class="checkbox-block">
+        <input type="checkbox" name="" value="">
+        <label for="">Announcements</label>
+        <p class="caption">Get announcements, recommendations, and updates about Apple products, services, and software.</p>
+      </div>
 
-      <input type="checkbox" name="" value="">
-      <label for="">Apps, Music, TV, and More</label>
-      <p class="caption">Get new releases, exclusive content, special offers, and recommendations for apps, music, movies, TV, books, podcasts, Apple Pay, Apple Card and more.</p>
+      <div class="checkbox-block">
+        <input type="checkbox" name="" value="">
+        <label for="">Apps, Music, TV, and More</label>
+        <p class="caption">Get new releases, exclusive content, special offers, and recommendations for apps, music, movies, TV, books, podcasts, Apple Pay, Apple Card and more.</p>
+      </div>
 
-      <input type="checkbox" name="" value="">
-      <label for="">Apple News Newsletter</label>
-      <p class="caption">The best stories, picked by the Apple News editors, delivered right to your inbox.</p>
+      <div class="checkbox-block">
+        <input type="checkbox" name="" value="">
+        <label for="">Apple News Newsletter</label>
+        <p class="caption">The best stories, picked by the Apple News editors, delivered right to your inbox.</p>
+      </div>
 
       <hr>
 
