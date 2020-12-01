@@ -17,10 +17,16 @@
       display: block;
       margin: 0 auto;
     }
-    p, input, select, caption, label, button, .double {
+    p,
+    input[type=text],
+    input[type=email],
+    input[type=password],
+    input[type=tel],
+    select,
+    label, button, .double, .caption {
       width: 460px;
       display: block;
-      margin: 0 auto;
+      margin: 0 auto 14px;
       -webkit-appearance:none;
     }
     select {
@@ -97,6 +103,13 @@
       margin: 0 0 14px;
       display: inline-block;
     }
+    .caption {
+      text-align: left;
+      font-size: 16px;
+      line-height: 1.2;
+      color: #aaa;
+      margin-bottom: 20px;
+    }
 
     </style>
   </head>
@@ -123,7 +136,7 @@
       <hr>
 
       <input type="email" placeholder="name@example.com">
-      <caption>This will be your new Apple ID.</caption>
+      <p class="caption">This will be your new Apple ID.</p>
       <input type="password" placeholder="Password">
       <input type="password" placeholder="Confirm password">
 
@@ -136,7 +149,7 @@
       <div class="infobar">
         <input type="tel" placeholder="Phone number"><a class="blue-circle" href="#">?</a>
       </div>
-      <caption>Be sure to enter a phone number you can always access. It will be used to verify your identity any time you sign in on a new device or web browser. Messaging or data rates my apply.</caption>
+      <p class="caption">Be sure to enter a phone number you can always access. It will be used to verify your identity any time you sign in on a new device or web browser. Messaging or data rates my apply.</p>
       <p>Verify with:</p>
       <input type="radio" name="g1" id="TM" value=""><label for="TM">Text message</label>
       <input type="radio" name="g1" id="PC" value=""><label for="PC">Phone call</label>
@@ -145,15 +158,15 @@
 
       <input type="checkbox" name="" value="">
       <label for="">Announcements</label>
-      <caption>Get announcements, recommendations, and updates about Apple products, services, and software.</caption>
+      <p class="caption">Get announcements, recommendations, and updates about Apple products, services, and software.</p>
 
       <input type="checkbox" name="" value="">
       <label for="">Apps, Music, TV, and More</label>
-      <caption>Get new releases, exclusive content, special offers, and recommendations for apps, music, movies, TV, books, podcasts, Apple Pay, Apple Card and more.</caption>
+      <p class="caption">Get new releases, exclusive content, special offers, and recommendations for apps, music, movies, TV, books, podcasts, Apple Pay, Apple Card and more.</p>
 
       <input type="checkbox" name="" value="">
       <label for="">Apple News Newsletter</label>
-      <caption>The best stories, picked by the Apple News editors, delivered right to your inbox.</caption>
+      <p class="caption">The best stories, picked by the Apple News editors, delivered right to your inbox.</p>
 
       <hr>
 
