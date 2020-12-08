@@ -5,6 +5,7 @@
     <title>Sign Up</title>
     <link rel="stylesheet" href="stylesheets/reset.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mailtoharshit/San-Francisco-Font-/sanfrancisco.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style media="screen">
     body {
       font-family: "San Francisco";
@@ -219,6 +220,14 @@
       height: 20px;
       top: -5px;
     }
+    .hidden {
+
+    }
+    .hidden a {
+      transform: scale(.5);
+      opacity: 0;
+      transition: all .3s;
+    }
     #search {
       width: 20px;
       height: 24px;
@@ -234,7 +243,16 @@
       background-size: 20px;
     }
 
+
     </style>
+
+    <script>
+    $(document).ready(function(){
+      $("#search").click(function(){
+        $(".nav-box").toggleClass("hidden");
+      });
+    });
+    </script>
   </head>
   <body>
     <nav>
