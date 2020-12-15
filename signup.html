@@ -225,9 +225,9 @@
       transition: all .3s;
     }
     .hidden a {
-      transform: scale(.5);
+      transform: scale(.8);
       opacity: 0;
-      transition: all .3s;
+      transition: all .2s;
     }
     .overlay {
       display: block;
@@ -278,7 +278,7 @@
       right: 10px;
       top: 10px;
       cursor: pointer;
-      transition: all .4s;
+      transition: all .6s;
     }
     .hidden .cross {
       right: 4px;
@@ -315,7 +315,7 @@
     }
     .search-box input {
       padding-left: 16px;
-      transition: all .5s;
+      transition: all .8s;
       color: white;
     }
     .search-box.hidden input {
@@ -332,6 +332,51 @@
     .blocker {
       display: none;
     }
+    .header-banner {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 160px;
+      background: #222;
+      overflow: hidden;
+      margin-bottom: 50px;
+    }
+    .color-cirlce {
+      position: absolute;
+      display: block;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+    .color-container {
+      width: 250px;
+      height: 250px;
+      position: absolute;
+      display: block;
+      top: -20px;
+      left: calc(50% - 125px);
+      animation: rotate 220s linear infinite;
+    }
+    .header-banner-backdrop {
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(60px);
+    }
+    .header-banner h1 {
+      display: block;
+      margin: 0 auto;
+      width: 400px;
+      color: white;
+      font-size: 30px;
+      text-align: center;
+      padding: 50px;
+      font-weight: 400;
+    }
 
     #bag {
       width: 20px;
@@ -339,6 +384,38 @@
       background: url('images/bag.svg') no-repeat;
       background-position: 0 -12px;
       background-size: 20px;
+    }
+    #red-cl {
+      background: red;
+      animation: color-opacity 2s linear alternate infinite;
+      top: 20px;
+      left: 40px;
+    }
+    #green-cl {
+      background: green;
+      animation: color-opacity 4s linear alternate infinite;
+      bottom: 65px;
+      left: 40px;
+    }
+    #blue-cl {
+      background: blue;
+      animation: color-opacity 1s linear alternate infinite;
+      bottom: 55px;
+      right: 35px;
+    }
+    #orange-cl {
+      background: orange;
+      animation: color-opacity 3s linear alternate infinite;
+      top: 15px;
+      right: 35px;
+    }
+    @keyframes color-opacity {
+      0% {opacity: .9;}
+      100% {opacity: .4;}
+    }
+    @keyframes rotate {
+      0% {transform: rotate(0deg), scale(4);}
+      100% {transform: rotate(360deg), scale(4);}
     }
 
 
@@ -348,10 +425,12 @@
     $(document).ready(function(){
       $(".search,.overlay,.cross").click(function(){
         $(".nav-box.hidden,.search-box.hidden").removeClass("blocker");
-        $(".nav-box,.overlay,.search-box").toggleClass("hidden");
+        setTimeout(function(){
+          $(".nav-box,.overlay,.search-box").toggleClass("hidden");
+        }, 50);
         setTimeout(function(){
           $(".nav-box.hidden,.search-box.hidden").addClass("blocker");
-        }, 500);
+        }, 100);
       });
     });
     </script>
@@ -378,10 +457,21 @@
           <div class="cross-line cross-left"></div>
           <div class="cross-line cross-right"></div>
         </div>
-
       </div>
     </nav>
-    <h1>Create Your ID</h1>
+
+    <div class="header-banner">
+      <div class="color-container">
+        <div id="red-cl" class="color-cirlce"></div>
+        <div id="green-cl" class="color-cirlce"></div>
+        <div id="blue-cl" class="color-cirlce"></div>
+        <div id="orange-cl" class="color-cirlce"></div>
+      </div>
+      <div class="header-banner-backdrop">
+        <h1>Create Your ID</h1>
+      </div>
+
+    </div>
 
     <form class="">
       <p>One Apple ID is all you need to access all Apple services.<br>Already have an Apple ID? <a href="#">Find it here ›</a></p>
