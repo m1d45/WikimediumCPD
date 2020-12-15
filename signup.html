@@ -242,8 +242,10 @@
       z-index: 2;
       transition: all .6s;
     }
-    .overlay.hidden,
-    .search-box.hidden {
+    .overlay.hidden
+    /* ,
+    .search-box.hidden  */
+    {
       display: none;
       transition: all .6s;
     }
@@ -267,6 +269,7 @@
     .search-box input[type=text]:focus {
       box-shadow: none;
     }
+
     .cross {
       width: 24px;
       height: 24px;
@@ -275,6 +278,11 @@
       right: 10px;
       top: 10px;
       cursor: pointer;
+      transition: all .4s;
+    }
+    .hidden .cross {
+      right: 4px;
+      transition: all .2s;
     }
     .cross-line {
       width: 1px;
@@ -293,12 +301,26 @@
       transform: rotate(-45deg);
       right: 11.5px;
     }
+    .search-box.hidden .search {
+      left: -20px;
+      transition: all .2s;
+    }
     .search-box .search {
       display: block;
       position: absolute;
       left: -30px;
       top: 10px;
       opacity: .6;
+      transition: all .6s;
+    }
+    .search-box input {
+      padding-left: 16px;
+      transition: all .5s;
+      color: white;
+    }
+    .search-box.hidden input {
+      padding-left: 24px;
+      transition: all .2s;
     }
     .search {
       width: 20px;
@@ -306,6 +328,9 @@
       background: url('images/search.svg');
       background-position: 0 -12px;
       background-size: 100%;
+    }
+    .blocker {
+      display: none;
     }
 
     #bag {
@@ -322,7 +347,11 @@
     <script>
     $(document).ready(function(){
       $(".search,.overlay,.cross").click(function(){
+        $(".nav-box.hidden,.search-box.hidden").removeClass("blocker");
         $(".nav-box,.overlay,.search-box").toggleClass("hidden");
+        setTimeout(function(){
+          $(".nav-box.hidden,.search-box.hidden").addClass("blocker");
+        }, 500);
       });
     });
     </script>
@@ -342,7 +371,7 @@
         <a class="search" href="#"></a>
         <a id="bag" href="#"></a>
       </div>
-      <div class="search-box hidden">
+      <div class="search-box hidden blocker">
         <span class="search" href="#"></span>
         <input type="text" placeholder="Search apple.com">
         <div class="cross">
@@ -353,6 +382,7 @@
       </div>
     </nav>
     <h1>Create Your ID</h1>
+
     <form class="">
       <p>One Apple ID is all you need to access all Apple services.<br>Already have an Apple ID? <a href="#">Find it here ›</a></p>
       <div class="double">
